@@ -87,6 +87,33 @@ void setup() {
   display.clearDisplay();  // Clear the buffer
   }
 
+  void bye()// Definition EYES_SLEEP on the screen
+  {
+  display.drawBitmap(0, 0, image_data_WORD_BYEarray, 128, 64, 1);
+  display.display();
+
+  delay(2500); // Pause for 2.5 seconds
+  display.clearDisplay();  // Clear the buffer
+  }
+
+  void mad()// Definition EYES_SLEEP on the screen
+  {
+  display.drawBitmap(0, 0, image_data_EYES_MADarray, 128, 64, 1);
+  display.display(); 
+
+  delay(2000); // Pause for 2 seconds
+  display.clearDisplay();
+  }
+  
+  void what()// Definition EYES_SLEEP on the screen
+  {
+  display.drawBitmap(0, 0, image_data_WHAT_WORDarray, 128, 64, 1);
+  display.display();
+
+  delay(1500); // Pause for 1.5 seconds
+  display.clearDisplay();  // Clear the buffer
+  }
+
   /////////////////////////////////////////////////////////
 
 void loop() {
@@ -138,35 +165,12 @@ void loop() {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-  
-   // Displays WHAT on the screen
-  display.drawBitmap(0, 0, image_data_WHAT_WORDarray, 128, 64, 1);
-  display.display();
+  what();
 
-  delay(1500); // Pause for 1.5 seconds
-  display.clearDisplay();  // Clear the buffer
+  mad();
 
-  // Draw 19 EYES_MAD bitmap on the screen
-  display.drawBitmap(0, 0, image_data_EYES_MADarray, 128, 64, 1);
-  display.display(); 
+  bye();
 
-  delay(2000); // Pause for 2 seconds
-  display.clearDisplay();
-
-
-  // Displays BYE on the screen
-  display.drawBitmap(0, 0, image_data_WORD_BYEarray, 128, 64, 1);
-  display.display();
-
-  delay(2500); // Pause for 2.5 seconds
-  display.clearDisplay();  // Clear the buffer
-
-
-// Displays EYES_SLEEP on the screen
-  display.drawBitmap(0, 0, image_data_EYES_SLEEParray, 128, 64, 1);
-  display.display();
-
-  delay(10000); // Pause for 10 seconds
-  display.clearDisplay();  // Clear the buffer
+  sleep();
 }
 // End of Arduino Sketch  
